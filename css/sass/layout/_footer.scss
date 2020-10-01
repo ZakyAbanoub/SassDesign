@@ -1,0 +1,178 @@
+footer{
+    overflow: hidden;
+    background-color: #d9d9d9;
+
+    h4{
+        color: #555;
+    }
+    .container > div {
+        margin: 50px auto;
+    }
+    .footerFirst{
+        @include mdDevices{
+            float: $floatLeft;
+            width: 100%;
+        }
+        @include lgDevices{
+            width: 50%;
+        }
+        // margin-right: 10%;
+
+        .card-div{
+            overflow: hidden;
+            margin-top: 30px;
+            // margin-bottom: 30px;
+            border: 1px solid #999;
+            border-radius: 3px;
+            width: 90%;
+            @include smDevices{
+                width: 100%;
+                border: none;
+            }
+            .img-div{
+                @include smDevices{
+                    width: 50%;
+                    margin: auto;
+                }
+                @include mdDevices{
+                    width: calc(100% / 2);
+                    float: $floatLeft;
+                    margin: 0;
+                }
+
+            img{
+                width: 100%;
+                object-fit: fill;
+                height: 200px;
+
+            }
+        }
+            .para-div{
+                @include smDevices{
+                    text-align: center;
+                    margin-bottom: 15px;
+                }
+                @include mdDevices{
+                    float: $floatLeft;
+                    margin-left: 2%;
+                    width: calc(90% / 2);
+                    letter-spacing: 1px;
+                }
+                // text-align: center;
+                h6{
+                    font-weight: bold;
+                    margin-top: 15px;
+                    color: $redColor;
+                    @include smDevices{
+                        margin-top: 10px;
+                    }
+                }
+                p{
+                    font-weight: 100;
+                    color: #888;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .footerSecond
+    {
+        text-align: center;
+
+        @include mdDevices{
+            text-align: left;
+            float: $floatLeft;
+            width: 50%;
+        }
+        @include lgDevices{
+            width: 25%;
+        }
+       address{
+           margin-top: 25px;
+           color: #777;
+           span{
+               color: red;
+               cursor: pointer;
+
+           }
+           h5{
+               font-weight: bold;
+           }
+       }
+   }
+   .footerThird{
+       @include smDevices{
+            h4{
+                text-align: center;
+            }
+        }
+        @include mdDevices{
+            float: $floatLeft;
+            width: 50%;
+        }
+        @include lgDevices{
+            width: 25%;
+        }
+        form{
+            margin-top: 30px;
+            input{
+                border: none;
+                outline: none;
+                color: #777;
+                border-radius: 8px;
+                padding: 10px;
+                margin-bottom: 10px;
+                width: 100%;
+                &:focus::placeholder{
+                    opacity: 0;
+                    transition: 0.3s all ease-in-out;
+                }
+            }
+            textarea{
+                border: none;
+                color: #777;
+                outline: none;
+                border-radius: 8px;
+                height: 100px;
+                padding: 10px;
+                width: 100%;
+                &:focus::placeholder{
+                    opacity: 0;
+                    transition: 0.3s all ease-in-out;
+                }
+            }
+            input[type="button"]{
+                display: block;
+                margin-top: 10px;
+                width: 50%;
+                padding: 10px 10px;
+                outline: none;
+                @include smDevices{
+                    width: 100%;
+                }
+            }
+        }
+   }
+}
+
+.copyright{
+    background-color: #d9d9d9;
+    border-top: 1px solid #999;
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    .firstCopy{
+            @include mdDevices{
+            display: inline-block;
+            width: 50%;
+            text-align: $textLeft;
+            }
+    }
+    .secondCopy{
+            @include mdDevices{
+            display: inline-block;
+            text-align: $textRight;
+            width: (100% - 55%);
+            }
+    }
+}

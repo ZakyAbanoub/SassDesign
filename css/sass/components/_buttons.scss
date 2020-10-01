@@ -1,0 +1,32 @@
+.mainButton{
+    background-color: $redColor;
+    color: #fff !important;
+    &:hover{
+        background-color: #555;
+        transition: 0.5s ease-in-out;
+    }
+}
+
+.the-toggler{
+    background-color: $redColor;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    display: none;
+    outline: none;
+    @include smDevices{
+        display: block;
+    }
+    span{
+        display: block;
+        background-color: #fff;
+        width: 30px;
+        height: 5px;
+        &:not(:last-of-type){
+            margin-bottom: 5px;
+        }
+    }
+}

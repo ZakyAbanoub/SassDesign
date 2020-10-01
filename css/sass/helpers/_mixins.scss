@@ -1,0 +1,58 @@
+/*Start Media Query*/
+@mixin smDevices {
+    @media(max-width:767px){
+        @content;
+    }
+}
+
+@mixin mdDevices {
+    @media(min-width: 768px){
+        @content;
+    }
+}
+
+@mixin lgDevices {
+    @media(min-width: 992px){
+        @content;
+    }
+}
+
+@mixin xlDevices{
+    @media(min-width: 1200px){
+        @content;
+    }
+}
+
+/*End Media Query*/
+/*Start Overlay*/
+@mixin overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/*End Overlay*/
+/*Start Prefixer*/
+@mixin prefixer($property, $value, $prefixes:()) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property} : $value;
+    }
+    #{$property}: $value;
+}
+/*End Prefixer*/
+
+/*Start Animation*/
+@mixin keyFrame($animation-name) {
+    @-webkit-keyframes #{$animation-name}
+    {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name}{
+        @content;
+    }
+    @keyframes #{$animation-name}{
+        @content;
+    }
+}
+/*End Animation*/

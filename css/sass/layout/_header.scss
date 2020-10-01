@@ -1,0 +1,82 @@
+.header{
+    padding: 20px 0;
+    overflow: hidden;
+    border-bottom: 1px solid $greyColor;
+    .logo{
+        position: relative;
+        @include mdDevices{
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
+        @include lgDevices{
+            width: 30%;
+            float: $floatLeft;
+            text-align: $textLeft;
+        }
+        h1{
+            margin-top: 15px;
+            margin-bottom: 0;
+            color: $greyColor;
+            font-weight: 200;
+            font-family: 'Piazzolla', serif;
+            span{
+                font-size: 25px;
+            }
+        }
+        p{
+            font-family: 'Piazzolla', serif;
+            margin-top: 0;
+            margin-left: 22px;
+            font-weight: 100;
+            color: #555;
+            @include mdDevices{
+                margin-left: 0px;
+            }
+            @include lgDevices{
+                margin-left: 22px;
+            }
+        }
+    }
+    .navbar{
+        overflow: hidden;
+        background-color: $redColor;
+        border-radius: 15px;
+        @include mdDevices{
+            display: block !important;
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
+        @include lgDevices{
+            width: 70%;
+            float: $floatLeft;
+        }
+        @include smDevices{
+            display: none;
+            border-radius: 0;
+        }
+        li{
+            width: 20%;
+            float: $floatLeft;
+            font-size: 18px;
+            text-align: center;
+        @include smDevices{
+            display: block;
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
+            a{
+                display: block;
+                padding: 20px 10px;
+                color: #fff;
+                text-decoration: none;
+                transition: 0.5s all ease-in-out;
+                &:hover{
+                    color: #bbb;
+                }
+            }
+        }
+    }
+}

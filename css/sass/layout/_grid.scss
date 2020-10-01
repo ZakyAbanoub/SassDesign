@@ -1,0 +1,31 @@
+*{
+    @include prefixer(box-sizing, border-box, webkit moz);
+}
+
+.container{
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    @include mdDevices{
+        width: 750px;
+    }
+    @include lgDevices{
+        width: 970px;
+    }
+    @include xlDevices{
+        width: 1700px;
+    }
+}
+
+.text-center-sm{
+    @include smDevices{
+        text-align: center;
+}
+}
+
+.mr-sm{
+    @include smDevices{
+    margin-bottom: 40px;
+    }
+}
