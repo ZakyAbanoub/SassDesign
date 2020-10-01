@@ -506,7 +506,12 @@ footer .footerFirst .card-div .img-div img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 200px;
-  border-radius: 12px;
+}
+
+@media (max-width: 767px) {
+  footer .footerFirst .card-div .img-div img {
+    border-radius: 12px;
+  }
 }
 
 @media (max-width: 767px) {
